@@ -30,8 +30,8 @@ html {
 	font-size:62.5%;
 }
 body {
-	font:300 11px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	color:#444;
+	font:300 16px/1.6 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color:#000;
 }
 /* clear */
 .clear:before,
@@ -172,8 +172,66 @@ div.featuredImage {
 /*------------------------------------*\
     PAGES
 \*------------------------------------*/
+h2 {
+	color: #e1800d;
+	font-size: 28px;
+	font-size: 2.8rem;
+	text-align: center;
+	font-weight: normal;
+	background-image: url(img/titleBG.png);
+	background-repeat: repeat-x;
+	background-position: center center;
+}
+h2 span {
+	padding: 0 25px;
+	background-color: #fff;
+}
+
+/*** About Us ***/
+div.photo {
+	background-color: #fff;
+	display: block;
+	float: left;
+	width: auto;
+	margin: 0 0 27px 30px;
+	padding: 10px 10px 15px 10px;
+	box-shadow: 0 3px 6px rgba(0,0,0,.25);
+	transform: rotate(-10deg);
+}
+div.photo:nth-child(even) {
+	transform: rotate(10deg);
+	margin-top: -80px;
+}
+.polaroid {
+	box-shadow: 0 3px 6px rgba(0,0,0,.25);
+	width: 100%;
+	height: auto;
+}
+
+/*** GRID ***/
+[class*='grid'] {
+	float: left;
+	position: relative;
+	padding: 0 20px 0 0;
+}
 
 
+.omega {
+	padding-right: 0;
+}
+.omega::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+@media only screen and (min-width: 768px) {
+	.grid2-3 {
+		width: 66.6%;
+	}
+	.grid1-3 {
+		width: 33.3%;
+	}
+}
 
 /*------------------------------------*\
     IMAGES
