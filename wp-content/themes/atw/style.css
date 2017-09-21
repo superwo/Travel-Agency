@@ -208,9 +208,64 @@ div.photo:nth-child(even) {
 	height: auto;
 }
 
+/*** Tours Section ***/
+ul.tours {
+	list-style: none;
+	padding: 0;
+}
+ul.tours li {
+	margin: 0 auto 20px 0;
+}
+ul.tours li h3 {
+	margin: 5px 0;
+	font-size: 20px;
+	font-size: 2rem;
+}
+ul.tours li h3 a {
+	color: #e1800d;
+}
+ul.tours li p {
+	color: #5d5d5d;
+}
+ul.tours li .featured-tour {
+	position: relative;
+}
+ul.tours li .featured-tour .more-info {
+	position: absolute;
+	top: 19px;
+	right: -12px;
+	width: 112px;
+}
+ul.tours li .date-price p.date {
+	float: left;
+	width: 60%;
+	margin-left: 5px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+ul.tours li .date-price p.price {
+	float: right;
+	width: 30%;
+	text-align: right;
+	color: #d4771e;
+	font-weight: bold;
+}
+ul.tours li .tour-description ul {
+	list-style: none;
+}
+ul.tours li .tour-description ul li::before {
+	content: '-';
+	position: relative;
+	left: -5px;
+}
+ul.tours li .tour-description ul li {
+	text-indent: -5px;
+	margin: 0;
+}
+
+
 /*** GRID ***/
 [class*='grid'] {
-	float: left;
 	position: relative;
 	padding: 0 20px 0 0;
 }
@@ -225,8 +280,14 @@ div.photo:nth-child(even) {
 	clear: both;
 }
 @media only screen and (min-width: 768px) {
+	[class*='grid'] {
+		float: left;
+	}
 	.grid2-3 {
 		width: 66.6%;
+	}
+	.grid2-4 {
+		width: 50%;
 	}
 	.grid1-3 {
 		width: 33.3%;
