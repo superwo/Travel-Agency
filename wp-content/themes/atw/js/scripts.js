@@ -1,11 +1,13 @@
 (function ($, root, undefined) {
-	
+
 	$(function () {
-		
+
 		'use strict';
-		
-		// DOM ready, take it away
-		
+
+		$('.gallery .gallery-item a').fancybox({
+			openEffect: 'fade'
+		});
+
 	});
-	
+
 })(jQuery, this);
