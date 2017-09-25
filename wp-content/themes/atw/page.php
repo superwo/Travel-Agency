@@ -4,12 +4,14 @@
 		<!-- section -->
 		<section>
 
-			
+
 
 		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
+			<h2><span><?php the_title(  ); ?></span></h2>
+
 			<!-- article -->
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			<article id="post-<?php the_ID(); ?>" <?php post_class('grid2-3'); ?>>
 
 				<?php the_content(); ?>
 
@@ -39,6 +41,5 @@
 		<!-- /section -->
 	</main>
 
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>
