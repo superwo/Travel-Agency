@@ -30,6 +30,7 @@ if (function_exists('add_theme_support'))
     add_image_size('medium', 350, 250, true); // Medium Thumbnail
     add_image_size('custom-size', 700, 200, true); // Custom Thumbnail Size call using the_post_thumbnail('custom-size');
     add_image_size( 'featuredTour', 730, 390, true );
+    add_image_size( 'featuredBlog', 1280, 444, true );
 
     // Add Support for Custom Backgrounds - Uncomment below if you're going to use
     add_theme_support('custom-background', array(
@@ -227,7 +228,7 @@ function html5wp_pagination()
 // Custom Excerpts
 function html5wp_index($length) // Create 20 Word Callback for Index page Excerpts, call using html5wp_excerpt('html5wp_index');
 {
-    return 20;
+    return 60;
 }
 
 // Create 40 Word Callback for Custom Post Excerpts, call using html5wp_excerpt('html5wp_custom_post');
