@@ -8,6 +8,10 @@
 			openEffect: 'fade'
 		});
 
+		$('ul.slider').bxSlider({
+			pager: false
+		});
+
 	});
 
 })(jQuery, this);

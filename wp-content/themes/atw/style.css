@@ -449,6 +449,34 @@ div.wpcf7 {
 	float: right;
 }
 
+/*** Front Page ***/
+/* Slider */
+section.slider ul {
+	margin: 0;
+}
+section.slider .bx-viewport,
+section.slider .bx-wrapper {
+	left: 0;
+	box-shadow: none;
+	border: none;
+}
+.bx-wrapper .bx-controls-direction a {
+	width: 44px;
+	height: 44px;
+	background: none;
+}
+.bx-wrapper .bx-prev,
+.bx-wrapper .bx-prev:hover{
+	left: 15px;
+	background-image: url(img/prev.png)!important;
+}
+.bx-wrapper .bx-next,
+.bx-wrapper .bx-next:hover{
+	right: 15px;
+	background-image: url(img/next.png)!important;
+	background-position: 0 0!important;
+}
+
 /*** GRID ***/
 [class*='grid'] {
 	position: relative;
