@@ -9,6 +9,11 @@
 	External Modules/Files
 \*------------------------------------*/
 
+/*** Widgets ***/
+if(file_exists(dirname(__FILE__) . '/inc/widgets.php')) {
+  require_once dirname(__FILE__) . '/inc/widgets.php';
+}
+
 function slider() {
   $args = array(
     'post_type' => 'slider',
@@ -189,6 +194,9 @@ function html5blank_styles()
     wp_register_style('fancyboxcss', get_template_directory_uri() . '/css/jquery.fancybox.css', array(), '1.0', 'all');
     wp_enqueue_style('fancyboxcss'); // Enqueue it!
 
+    wp_register_style('pontanoFont', 'https://fonts.googleapis.com/css?family=Pontano+Sans', array(), '1.0', 'all');
+    wp_enqueue_style('pontanoFont');
+
     wp_register_style('html5blank', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
     wp_enqueue_style('html5blank'); // Enqueue it!
 }
@@ -259,7 +267,7 @@ if (function_exists('register_sidebar'))
         'name' => __('Widget Area 2', 'html5blank'),
         'description' => __('Description for this widget-area...', 'html5blank'),
         'id' => 'widget-area-2',
-        'before_widget' => '<div id="%1$s" class="%2$s">',
+        'before_widget' => '<div id="%1$s" class="%2$s grid1-4">',
         'after_widget' => '</div>',
         'before_title' => '<h3>',
         'after_title' => '</h3>'

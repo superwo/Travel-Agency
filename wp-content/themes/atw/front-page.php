@@ -66,8 +66,30 @@
       </ul>
     </section>
 
-    <section class="latest-entries grid1-3">
+    <section class="latest-testimonials grid1-3">
       <h2><span>Testimonials</span></h2>
+
+      <?php $args = array(
+        'post_type' => 'testimonial',
+        'posts_per_page' => 2,
+        'orderby' => 'date',
+        'order' => 'DESC'
+      ); ?>
+      <ul>
+        <?php $testimonial = new WP_Query($args); while($testimonial->have_posts()): $testimonial->the_post(); ?>
+          <li>
+            <div class="testimonial-content quote">
+              <?php html5wp_excerpt('html5wp_custom_post'); ?>
+              <div class="from-testimonial">
+                <?php $name = get_field('person_name'); ?>
+                <?php $from = get_field('from'); ?>
+                <p><strong><?php echo $name . ', ' . $from ?></strong></p>
+              </div>
+            </div>
+          </li>
+        <?php endwhile; wp_reset_postdata(); ?>
+        <a href="<?php echo get_permalink(11); ?>" class="button">View All</a>
+      </ul>
     </section>
   </div>
 
