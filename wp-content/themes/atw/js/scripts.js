@@ -4,6 +4,8 @@
 
 		'use strict';
 
+		$('header nav ul').slicknav();
+
 		$('.gallery .gallery-item a').fancybox({
 			openEffect: 'fade'
 		});

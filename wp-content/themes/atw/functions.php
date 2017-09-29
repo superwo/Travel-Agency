@@ -167,6 +167,9 @@ function html5blank_header_scripts()
         wp_register_script('picturefill', get_template_directory_uri() . '/js/picturefill.js', array(), '3.0'); // picturefill
         wp_enqueue_script('picturefill'); // Enqueue it!
 
+        wp_register_script('slickNav', get_template_directory_uri() . '/js/jquery.slicknav.min.js', array(), '1.0.0'); // slickNav
+        wp_enqueue_script('slickNav'); // Enqueue it!
+
 
         wp_register_script('html5blankscripts', get_template_directory_uri() . '/js/scripts.js', array('jquery'), '1.0.0'); // Custom scripts
         wp_enqueue_script('html5blankscripts'); // Enqueue it!
@@ -196,6 +199,9 @@ function html5blank_styles()
 
     wp_register_style('pontanoFont', 'https://fonts.googleapis.com/css?family=Pontano+Sans', array(), '1.0', 'all');
     wp_enqueue_style('pontanoFont');
+
+    wp_register_style('slickNavCSS', get_template_directory_uri() . '/css/slicknav.min.css', array(), '1.0.0', 'all');
+    wp_enqueue_style('slickNavCSS');
 
     wp_register_style('html5blank', get_template_directory_uri() . '/style.css', array(), '1.0', 'all');
     wp_enqueue_style('html5blank'); // Enqueue it!
